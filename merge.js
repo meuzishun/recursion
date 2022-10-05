@@ -1,24 +1,24 @@
 function merge(arr1, arr2) {
-  let m = arr1.length;
-  let n = arr2.length;
   let i = 0;
   let j = 0;
-  let k = 0;
 
   const sorted = [];
 
-  while (i <= m && j <= n) {
-    if (arr1[i] < arr2[i]) {
-      sorted[k++] = arr1[i++];
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      sorted.push(arr1[i]);
+      i++;
     } else {
-      sorted[k++] = arr2[j++];
+      sorted.push(arr2[j]);
+      j++;
     }
   }
-  for (; i <= m; i++) {
-    sorted[k++] = arr1[i];
+
+  for (; i < arr1.length; i++) {
+    sorted.push(arr1[i]);
   }
-  for (; j <= n; j++) {
-    sorted[k++] = arr2[j];
+  for (; j < arr2.length; j++) {
+    sorted.push(arr2[j]);
   }
 
   return sorted;
