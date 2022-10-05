@@ -1,12 +1,8 @@
 function fibsRec(len) {
-  return len === 1
-    ? [0]
-    : len === 2
-    ? [0, 1]
-    : fibsRec(len - 1).concat(
-        fibsRec(len - 1)[fibsRec(len - 1).length - 1] +
-          fibsRec(len - 1)[fibsRec(len - 1).length - 2]
-      );
+  if (len === 1) return [0];
+  if (len === 2) return [0, 1];
+  const arr = fibsRec(len - 1);
+  return arr.concat(arr.at(-1) + arr.at(-2));
 }
 
 // console.log(fibsRec(8));
