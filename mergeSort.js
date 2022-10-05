@@ -1,4 +1,4 @@
-import { merge } from './merge.js';
+import merge from './merge.js';
 
 function mergeSort(arr) {
   if (arr.length > 1) {
