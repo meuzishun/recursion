@@ -1,4 +1,4 @@
-function fibs(len) {
+export default function fibs(len) {
   let prev = 0;
   let next = 1;
   let temp;
@@ -15,5 +15,3 @@ function fibs(len) {
   }
   return arr;
 }
-
-// console.log(fibs(8));
