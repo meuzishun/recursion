@@ -1,25 +1,32 @@
 export default function merge(arr1, arr2) {
-  let i = 0;
-  let j = 0;
+  // let i = 0;
+  // let j = 0;
 
   const sorted = [];
 
-  while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] < arr2[j]) {
-      sorted.push(arr1[i]);
-      i++;
-    } else {
-      sorted.push(arr2[j]);
-      j++;
-    }
+  // while (i < arr1.length && j < arr2.length) {
+  //   if (arr1[i] < arr2[j]) {
+  //     sorted.push(arr1[i]);
+  //     i++;
+  //   } else {
+  //     sorted.push(arr2[j]);
+  //     j++;
+  //   }
+  // }
+
+  while (arr1.length > 0 && arr2.length > 0) {
+    arr1[0] < arr2[0] ? sorted.push(arr1.shift()) : sorted.push(arr2.shift());
   }
 
-  for (; i < arr1.length; i++) {
-    sorted.push(arr1[i]);
-  }
-  for (; j < arr2.length; j++) {
-    sorted.push(arr2[j]);
-  }
+  // for (; i < arr1.length; i++) {
+  //   sorted.push(arr1[i]);
+  // }
+  // for (; j < arr2.length; j++) {
+  //   sorted.push(arr2[j]);
+  // }
+
+  if (arr1.length > 0) sorted.push(...arr1);
+  if (arr2.length > 0) sorted.push(...arr2);
 
   return sorted;
 }

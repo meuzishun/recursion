@@ -11,8 +11,8 @@ import mergeSort from './functions/mergeSort.js';
 // console.log(fibsRec(8));
 
 //* MERGE FUNCTION (UNCOMMENT TO TRY)
-// console.log(merge([1, 3, 5, 7], [2, 4, 6, 8]));
-// console.log(merge([1, 5, 7, 10, 13], [2, 3, 4, 6, 8, 9, 11, 12, 13]));
+console.log(merge([1, 3, 5, 7], [2, 4, 6, 8]));
+console.log(merge([1, 5, 7, 10, 13], [2, 3, 4, 6, 8, 9, 11, 12, 13]));
 
 //* SPLIT FUNCTION (UNCOMMENT TO TRY)
 // console.log(split([4, 2, 7]));
