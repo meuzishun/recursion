@@ -1,18 +1,22 @@
+import merge from './merge.js';
+
 export default function mergeSort(arr) {
   if (arr.length < 2) return arr;
 
   const arr1 = mergeSort(arr.slice(0, arr.length / 2));
   const arr2 = mergeSort(arr.slice(arr.length / 2));
-  const sorted = [];
+  // const sorted = [];
 
-  while (arr1.length > 0 && arr2.length > 0) {
-    arr1[0] < arr2[0] ? sorted.push(arr1.shift()) : sorted.push(arr2.shift());
-  }
+  // while (arr1.length > 0 && arr2.length > 0) {
+  //   arr1[0] < arr2[0] ? sorted.push(arr1.shift()) : sorted.push(arr2.shift());
+  // }
 
-  if (arr1.length > 0) sorted.push(...arr1);
-  if (arr2.length > 0) sorted.push(...arr2);
+  // if (arr1.length > 0) sorted.push(...arr1);
+  // if (arr2.length > 0) sorted.push(...arr2);
 
-  return sorted;
+  // return sorted;
+
+  return merge(arr1, arr2);
 }
 
 // console.log(mergeSort([1, 4, 8, 2, 6, 9, 5, 1, 7]));
